@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: none;
+    padding: 20px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: 0;
+    text-align: left;
+}
+
+.text-content {
+    max-width: 600px;
+    margin-right: 200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #555;
+    border: 2px solid #555;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.profile-image {
+    width: 400px; /* Ukuran foto untuk layar besar */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2em; /* Ukuran font untuk layar besar */
+    color: #333;
+}
+
+.header-content p {
+    margin: 15px 0;
+    font-size: 2.5em; /* Ukuran font untuk layar besar */
+    color: #555;
+}
+
+.p1-content {
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 40px 0; /* Padding diubah untuk memanfaatkan lebar penuh */
+    background-color: #fff; /* Menambahkan background putih untuk section */
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: rgb(23, 23, 134);
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.about-image {
+    width: 200px; /* Ukuran foto di samping teks */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.personal-info {
+    list-style-type: none;
+    padding: 0;
+    width: calc(100% - 220px); /* Lebar total dikurangi lebar foto */
+}
+
+.personal-info li {
+    margin-bottom: 10px;
+}
+
+.personal-info li {
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Queries untuk responsif */
+
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image {
+        width: 300px; /* Ukuran foto untuk layar menengah */
+    }
+    
+    .header-content h1,
+    .header-content p {
+        font-size: 2em; /* Ukuran font untuk layar menengah */
+    }
+    
+    .personal-info {
+        width: 100%; /* Lebar personal info untuk layar menengah */
+    }
+    
+    .about-content {
+        flex-direction: column-reverse; /* Teks di atas foto untuk layar menengah */
+        text-align: left;
+    }
+    
+    .about-image {
+        width: 100%; /* Ukuran foto untuk layar menengah */
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
