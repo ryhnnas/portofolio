@@ -1,34 +1,141 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset default margin dan padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #e6e6e6;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #cecece;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar styles */
+.left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Lebarkan sidebar */
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 20px; /* Sesuaikan padding atas untuk membuat ruang di atas gambar profil */
+}
+
+.left-sidebar .profile-image {
+    width: 150px; /* Lebarkan gambar profil */
+    height: 150px; /* Sesuaikan tinggi gambar profil */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Jarak bawah gambar profil */
+}
+
+/* Tambahan CSS untuk ikon media sosial */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Jarak antara ikon media sosial dan menu-item */
+}
+
+.social-icon {
+    margin: 0 10px; /* Jarak antar ikon */
+}
+
+.social-icon-image {
+    width: 20px;  /* Ukuran ikon */
+    height: 20px; /* Sesuaikan ukuran ikon */
+    transition: transform 0.3s;
+}
+
+.social-icon-image:hover {
+    transform: scale(1.2); /* Efek zoom saat dihover */
+}
+
+.left-sidebar .menu-item {
+    margin-top: 20px; /* Jarak antara ikon media sosial dan menu-item */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-sidebar .menu-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.left-sidebar .menu-item a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.left-sidebar footer {
+    position: fixed;
+    bottom: 100px; /* Menempatkan footer di bagian bawah halaman */
+    width: 100%; /* Memastikan footer memenuhi lebar layar */
+    color: #333; /* Warna teks footer */
+    font-size: 0.8em; /* Ukuran font footer */
+    text-align: center; /* Menempatkan teks di tengah */
+    padding: 10px; /* Padding di sekitar teks */
+    box-sizing: border-box; /* Mengatur box sizing untuk padding dan border */
+}
+
+.main-content {
+    margin-left: 250px; /* Sesuaikan margin kiri sesuai dengan lebar sidebar */
+    width: calc(100% - 250px); /* Sesuaikan lebar konten utama */
+    padding: 0;
 }
 
 header {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: none;
-    padding: 20px;
-    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100vh; /* Header memenuhi tinggi layar */
+    box-sizing: border-box;
 }
 
 .header-content {
     display: flex;
-    align-items: 0;
+    align-items: center;
+    justify-content: space-between; /* Mengatur jarak antara teks dan gambar */
     text-align: left;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .text-content {
-    max-width: 600px;
-    margin-right: 200px;
+    width: 100%;
+    max-width: 800px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
-
 
 .btn {
     position: absolute;
@@ -48,53 +155,84 @@ header {
     color: #fff;
 }
 
-.profile-image {
-    width: 400px; /* Ukuran foto untuk layar besar */
+.header-image {
+    width: 400px; /* Sesuaikan ukuran lebar gambar */
     height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    border-radius: 10px; /* Tambahkan border-radius jika diinginkan */
+    object-fit: cover; /* Menjaga rasio gambar */
+    margin-left: 20px; /* Tambahkan margin kiri untuk memberi jarak */
 }
 
 .header-content h1 {
     margin: 0;
-    font-size: 2em; /* Ukuran font untuk layar besar */
+    font-size: 4em; /* Ukuran font lebih besar */
     color: #333;
 }
 
 .header-content p {
     margin: 15px 0;
-    font-size: 2.5em; /* Ukuran font untuk layar besar */
+    font-size: 2em; /* Ukuran font lebih besar */
     color: #555;
 }
 
 .p1-content {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10px;
 }
 
 section {
-    padding: 40px 0; /* Padding diubah untuk memanfaatkan lebar penuh */
-    background-color: #fff; /* Menambahkan background putih untuk section */
+    padding: 40px 20px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-}
-
-h2 {
-    text-align: left;
+h2.overlay-text {
+    text-align: center;
     margin-bottom: 20px;
-    font-size: 40px;
-    color: rgb(23, 23, 134);
+    font-size: 2em;
+    color: rgb(9, 43, 238);
+    position: relative;
+    z-index: 1;
 }
 
+.position-relative {
+    position: relative;
+}
+
+.outlined-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 2px #dee2e6;
+    font-weight: bold;
+    font-size: 5em;
+    opacity: 0.3;
+}
+
+/* Penyesuaian untuk tata letak About Me */
 .about-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    margin-top: 30px;
+    margin-top: 60px; /* Mengatur jarak antara About Me dan Education */
+}
+
+.about-me {
+    width: 100%;
+    order: 1; /* Mengatur urutan konten About Me */
+    margin-bottom: 20px; /* Jarak antara About Me dan teks berikutnya */
+}
+
+.about-text {
+    max-width: 100%; /* Lebar maksimum teks tentang */
+    margin-bottom: 20px; /* Jarak antara teks About Me dan gambar */
 }
 
 .about-image {
@@ -102,64 +240,222 @@ h2 {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    margin-right: 20px;
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    order: 2; /* Menempatkan gambar di bawah teks */
+    margin-bottom: 20px; /* Jarak bawah gambar */
 }
 
 .personal-info {
+    display: flex;
+    justify-content: space-between; /* Menempatkan dua bagian info pribadi di sebelah kanan */
+    width: calc(100% - 270px); /* Lebar total dikurangi lebar foto dan margin */
+    margin-top: 20px; /* Jarak atas informasi pribadi */
+    order: 3; /* Menempatkan informasi pribadi di kanan gambar */
+}
+
+.personal-info-left,
+.personal-info-right {
+    width: 48%; /* Lebar masing-masing bagian info pribadi */
+}
+
+.personal-info-left ul,
+.personal-info-right ul {
     list-style-type: none;
     padding: 0;
-    width: calc(100% - 220px); /* Lebar total dikurangi lebar foto */
 }
 
-.personal-info li {
-    margin-bottom: 10px;
-}
-
-.personal-info li {
-    margin-right: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+.personal-info-left li,
+.personal-info-right li {
+    margin-bottom: 30px;
 }
 
 /* Media Queries untuk responsif */
-
 @media only screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
+        text-align: left;
+    }
+
+    .about-image {
+        width: 100%; /* Ukuran foto untuk layar kecil */
+        margin-left: 0; /* Nol margin kiri */
+        margin-bottom: 20px; /* Jarak bawah gambar */
+        order: 2; /* Menempatkan gambar di bawah teks untuk layar kecil */
+    }
+
+    .personal-info {
+        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
+        width: 100%; /* Lebar personal info untuk layar kecil */
+        margin-top: 20px; /* Jarak atas informasi pribadi untuk layar kecil */
+        order: 3; /* Menempatkan informasi pribadi di bawah gambar untuk layar kecil */
+    }
+
+    .personal-info-left,
+    .personal-info-right {
+        width: 100%; /* Lebar masing-masing bagian info pribadi untuk layar kecil */
+        margin-bottom: 10px; /* Jarak antar bagian info pribadi untuk layar kecil */
+        margin-right: 0; /* Hapus margin kanan untuk layar kecil */
+    }
+}
+
+/* Penyesuaian untuk bagian Education */
+.education-items {
+    margin-top: 10px; /* Mengatur jarak bagian Education dari bagian sebelumnya */
+    padding: 20px;
+}
+
+.education-item {
+    background-color: #cecece; /* Warna latar belakang putih */
+    border: 1px solid #ddd; /* Border untuk item education */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kedalaman */
+    padding: 20px; /* Padding dalam item education */
+    margin-bottom: 30px; /* Mengatur jarak antara item Education */
+    box-sizing: border-box; /* Mengatur box sizing */
+    border-radius: 10px; /* Membuat sudut border melengkung */
+}
+
+/* Penyesuaian untuk judul dan deskripsi di Education */
+.education h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Styles for portfolio section */
+#portfolio {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-direction: column; /* Menyusun item portofolio secara vertikal */
+    align-items: center; /* Menyelaraskan item ke tengah secara horizontal */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    width: 100%; /* Lebar item portofolio menyesuaikan lebar kontainer */
+    max-width: 700px; /* Maksimum lebar item portofolio */
+    margin-top: 30px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px; /* Menambahkan border-radius untuk sudut melengkung */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi efek saat hover */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek shadow lebih dalam saat hover */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Menambahkan border-radius pada gambar */
+}
+
+.portfolio-item h3 {
+    margin-top: 15px; /* Menambah jarak atas judul */
+    font-size: 1.8rem; /* Ukuran font yang lebih besar untuk judul */
+    color: #333; /* Warna judul */
+}
+
+.portfolio-item p {
+    font-size: 1.1rem; /* Ukuran font yang lebih besar untuk deskripsi */
+    line-height: 1.8; /* Jarak antar baris teks */
+    color: #555; /* Warna deskripsi */
+}
+
+/* Media Queries untuk responsif */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-sidebar .profile-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .left-sidebar footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.7em;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
     .header-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .text-content {
         margin-right: 0;
         margin-bottom: 20px;
     }
-    
+
     .profile-image {
-        width: 300px; /* Ukuran foto untuk layar menengah */
+        width: 100%;
+        max-width: 300px;
     }
-    
+
     .header-content h1,
     .header-content p {
-        font-size: 2em; /* Ukuran font untuk layar menengah */
+        font-size: 2em;
     }
-    
+
     .personal-info {
-        width: 100%; /* Lebar personal info untuk layar menengah */
+        width: 100%;
+        margin-right: 0;
     }
-    
+
     .about-content {
-        flex-direction: column-reverse; /* Teks di atas foto untuk layar menengah */
+        flex-direction: column;
         text-align: left;
     }
-    
+
     .about-image {
-        width: 100%; /* Ukuran foto untuk layar menengah */
-        margin-right: 0;
+        width: 100%;
+        margin-left: 0;
         margin-bottom: 20px;
+        order: 1; /* Memindahkan gambar di bawah teks */
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-item {
+        width: 90%; /* Lebar item portofolio menyesuaikan lebar layar pada perangkat kecil */
+        max-width: none; /* Hapus batas maksimum lebar */
     }
 }
