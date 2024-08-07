@@ -92,14 +92,17 @@ body {
 
 .left-sidebar footer {
     position: fixed;
-    bottom: 100px; /* Menempatkan footer di bagian bawah halaman */
-    width: 100%; /* Memastikan footer memenuhi lebar layar */
+    bottom: 100px;
+    left: 0;
+    width: 250px; /* Sesuaikan dengan lebar sidebar */
     color: #333; /* Warna teks footer */
     font-size: 0.8em; /* Ukuran font footer */
     text-align: center; /* Menempatkan teks di tengah */
     padding: 10px; /* Padding di sekitar teks */
     box-sizing: border-box; /* Mengatur box sizing untuk padding dan border */
+    background-color: #f0f0f0; /* Warna latar belakang footer */
 }
+
 
 .main-content {
     margin-left: 250px; /* Sesuaikan margin kiri sesuai dengan lebar sidebar */
@@ -399,8 +402,7 @@ h2.overlay-text {
     }
 
     .left-sidebar footer {
-        position: fixed;
-        bottom: 0;
+        position: static;
         width: 100%;
         padding: 10px;
         font-size: 0.7em;
