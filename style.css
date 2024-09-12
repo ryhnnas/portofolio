@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* CSS for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Global styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -144,13 +149,15 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    font-size: small;
     background-color: transparent;
     color: #555;
     border: 2px solid #555;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -220,17 +227,25 @@ h2.overlay-text {
 }
 
 /* Penyesuaian untuk tata letak About Me */
+#about h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
 .about-content {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin-top: 60px; /* Mengatur jarak antara About Me dan Education */
+    margin-top: 0px; /* Mengatur jarak antara About Me dan Education */
 }
 
 .about-me {
     width: 100%;
     order: 1; /* Mengatur urutan konten About Me */
     margin-bottom: 20px; /* Jarak antara About Me dan teks berikutnya */
+    color: #666; /* Warna teks paragraf */
+    line-height: 1.; /* Jarak antar baris untuk keterbacaan yang lebih baik */
 }
 
 .about-text {
@@ -254,6 +269,7 @@ h2.overlay-text {
     width: calc(100% - 270px); /* Lebar total dikurangi lebar foto dan margin */
     margin-top: 20px; /* Jarak atas informasi pribadi */
     order: 3; /* Menempatkan informasi pribadi di kanan gambar */
+    color: #666; /* Warna teks paragraf */
 }
 
 .personal-info-left,
@@ -272,114 +288,127 @@ h2.overlay-text {
     margin-bottom: 30px;
 }
 
-/* Media Queries untuk responsif */
-@media only screen and (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
-        text-align: left;
-    }
-
-    .about-image {
-        width: 100%; /* Ukuran foto untuk layar kecil */
-        margin-left: 0; /* Nol margin kiri */
-        margin-bottom: 20px; /* Jarak bawah gambar */
-        order: 2; /* Menempatkan gambar di bawah teks untuk layar kecil */
-    }
-
-    .personal-info {
-        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
-        width: 100%; /* Lebar personal info untuk layar kecil */
-        margin-top: 20px; /* Jarak atas informasi pribadi untuk layar kecil */
-        order: 3; /* Menempatkan informasi pribadi di bawah gambar untuk layar kecil */
-    }
-
-    .personal-info-left,
-    .personal-info-right {
-        width: 100%; /* Lebar masing-masing bagian info pribadi untuk layar kecil */
-        margin-bottom: 10px; /* Jarak antar bagian info pribadi untuk layar kecil */
-        margin-right: 0; /* Hapus margin kanan untuk layar kecil */
-    }
+/* Penyesuaian untuk bagian Education */
+#education {
+  padding: 30px ; /* Menambahkan padding di sekitar bagian pendidikan */
+  background-color: #cecece; /* Warna latar belakang yang lebih lembut */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan lebih dalam untuk efek kedalaman yang lebih baik */
 }
 
-/* Penyesuaian untuk bagian Education */
+#education h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
 .education-items {
-    margin-top: 10px; /* Mengatur jarak bagian Education dari bagian sebelumnya */
-    padding: 20px;
+  display: flex;
+  flex-direction: column; /* Menyusun item pendidikan secara vertikal */
+  gap: 30px; /* Jarak antara item pendidikan */
 }
 
 .education-item {
-    background-color: #cecece; /* Warna latar belakang putih */
-    border: 1px solid #ddd; /* Border untuk item education */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kedalaman */
-    padding: 20px; /* Padding dalam item education */
-    margin-bottom: 30px; /* Mengatur jarak antara item Education */
-    box-sizing: border-box; /* Mengatur box sizing */
-    border-radius: 10px; /* Membuat sudut border melengkung */
+  background-color: #ffffff; /* Warna latar belakang item pendidikan */
+  padding: 20px; /* Ruang di dalam item pendidikan */
+  border-radius: 10px; /* Sudut melengkung yang lebih kecil untuk item pendidikan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk item pendidikan */
+  border-left: 5px solid #666; /* Garis sisi kiri untuk aksen visual */
 }
 
-/* Penyesuaian untuk judul dan deskripsi di Education */
-.education h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+.education-item h3 {
+  margin-top: 0; /* Menghapus margin atas dari judul */
+  color: #333; /* Warna teks judul */
+  font-size: 1.6em; /* Ukuran font judul lebih besar */
+  font-weight: bold; /* Menebalkan teks judul */
+  border-bottom: 2px solid #f4f4f4; /* Garis bawah untuk membedakan judul dari konten */
+  padding-bottom: 10px; /* Ruang di bawah judul */
 }
 
-.education p {
-    font-size: 1em;
-    color: #555;
+.education-item p {
+  margin: 8px 0; /* Jarak vertikal antar paragraf */
+  color: #666; /* Warna teks paragraf */
+  line-height: 1.6; /* Jarak antar baris untuk keterbacaan yang lebih baik */
 }
 
-/* Styles for portfolio section */
+.education-item p:first-of-type {
+  font-weight: bold; /* Membuat teks pertama (nama institusi) menjadi tebal */
+  color: #333; /* Warna teks nama institusi */
+}
+
+/* Styling untuk section portfolio */
 #portfolio {
-    background-color: #f8f8f8;
-    padding: 40px 20px;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: left;
 }
 
+#portfolio h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Flex layout untuk portfolio items */
 .portfolio-items {
     display: flex;
-    flex-direction: column; /* Menyusun item portofolio secara vertikal */
-    align-items: center; /* Menyelaraskan item ke tengah secara horizontal */
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
 }
 
+/* Flexbox untuk mengatur gambar di kiri dan keterangan di kanan */
 .portfolio-item {
-    width: 100%; /* Lebar item portofolio menyesuaikan lebar kontainer */
-    max-width: 700px; /* Maksimum lebar item portofolio */
-    margin-top: 30px;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Membuat layout flexbox */
+    align-items: flex-start; /* Rata atas antara gambar dan teks */
+    background-color: white;
+    width: 100%;
+    max-width: 900px; /* Lebar maksimal item portofolio */
     padding: 20px;
-    border-radius: 8px; /* Menambahkan border-radius untuk sudut melengkung */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transisi efek saat hover */
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05); /* Efek zoom saat hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efek shadow lebih dalam saat hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    width: 40%; /* Ukuran gambar lebih besar */
     height: auto;
-    border-radius: 8px; /* Menambahkan border-radius pada gambar */
+    border-radius: 8px;
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.portfolio-item .portfolio-text {
+    width: 60%; /* Lebar teks menyesuaikan dengan gambar */
 }
 
 .portfolio-item h3 {
-    margin-top: 15px; /* Menambah jarak atas judul */
-    font-size: 1.8rem; /* Ukuran font yang lebih besar untuk judul */
-    color: #333; /* Warna judul */
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+    text-decoration: underline;
 }
 
 .portfolio-item p {
-    font-size: 1.1rem; /* Ukuran font yang lebih besar untuk deskripsi */
-    line-height: 1.8; /* Jarak antar baris teks */
-    color: #555; /* Warna deskripsi */
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-/* Media Queries untuk responsif */
-@media only screen and (max-width: 768px) {
+/* Styling untuk link "view" */
+.portfolio-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.portfolio-item a:hover {
+    color: #0056b3;
+}
+
+/* Media Queries untuk layar HP responsif */
+@media only screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -410,7 +439,6 @@ h2.overlay-text {
 
     .main-content {
         margin-left: 0;
-        padding: 20px;
         width: 100%;
     }
 
@@ -434,21 +462,16 @@ h2.overlay-text {
         font-size: 2em;
     }
 
-    .personal-info {
-        width: 100%;
-        margin-right: 0;
-    }
-
     .about-content {
-        flex-direction: column;
+        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
         text-align: left;
     }
 
     .about-image {
-        width: 100%;
-        margin-left: 0;
-        margin-bottom: 20px;
-        order: 1; /* Memindahkan gambar di bawah teks */
+        width: 100%; /* Ukuran foto untuk layar kecil */
+        margin-left: 0; /* Nol margin kiri */
+        margin-bottom: 20px; /* Jarak bawah gambar */
+        order: 2; /* Menempatkan gambar di bawah teks untuk layar kecil */
     }
 
     .about-text {
@@ -456,8 +479,34 @@ h2.overlay-text {
         margin-bottom: 20px;
     }
 
+    .personal-info {
+        flex-direction: column; /* Teks di atas gambar untuk layar kecil */
+        width: 100%; /* Lebar personal info untuk layar kecil */
+        margin-top: 20px; /* Jarak atas informasi pribadi untuk layar kecil */
+        order: 3; /* Menempatkan informasi pribadi di bawah gambar untuk layar kecil */
+        margin-right: 0;
+    }
+
+    .personal-info-left,
+    .personal-info-right {
+        width: 100%; /* Lebar masing-masing bagian info pribadi untuk layar kecil */
+        margin-bottom: 10px; /* Jarak antar bagian info pribadi untuk layar kecil */
+        margin-right: 0; /* Hapus margin kanan untuk layar kecil */
+    }
+
+
     .portfolio-item {
-        width: 90%; /* Lebar item portofolio menyesuaikan lebar layar pada perangkat kecil */
-        max-width: none; /* Hapus batas maksimum lebar */
+        flex-direction: column; /* Pada layar kecil, gambar dan teks akan bertumpuk */
+        max-width: 100%;
+    }
+
+    .portfolio-item img {
+        width: 100%; /* Gambar akan memenuhi lebar layar pada perangkat kecil */
+        margin-right: 0;
+        margin-bottom: 15px; /* Tambahkan jarak antara gambar dan teks */
+    }
+
+    .portfolio-item .portfolio-text {
+        width: 100%; /* Teks akan memenuhi lebar layar pada perangkat kecil */
     }
 }
