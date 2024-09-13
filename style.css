@@ -409,9 +409,15 @@ h2.overlay-text {
 
 /* Media Queries untuk layar HP responsif */
 @media only screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     .left-sidebar {
