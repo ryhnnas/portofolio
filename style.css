@@ -417,7 +417,7 @@ h2.overlay-text {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        max-width: 100%;
+        max-width: auto;
     }
 
     .left-sidebar {
