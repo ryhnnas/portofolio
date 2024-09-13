@@ -363,7 +363,7 @@ h2.overlay-text {
     align-items: flex-start; /* Rata atas antara gambar dan teks */
     background-color: white;
     width: 100%;
-    max-width: 900px; /* Lebar maksimal item portofolio */
+    max-width: auto; /* Lebar maksimal item portofolio */
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
