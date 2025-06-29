@@ -1,136 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Reyhan Agra Syihab</title>
+    <title>Reyhan Agra Syihab - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="left-sidebar">
-            <!-- Gambar Profil -->
-            <img src="img/Foto Sidebar.png" alt="Gambar Saya" class="profile-image">
-            <!-- Ikon Media Sosial -->
-            <div class="social-icons">
-                <a href="https://www.instagram.com/ryhnnas" target="_blank" class="social-icon">
-                    <img src="img/instagram.png" alt="Instagram Icon" class="social-icon-image">
-                </a>
-                <a href="https://www.tiktok.com/@ryhnnas" target="_blank" class="social-icon">
-                    <img src="img/tiktok.png" alt="TikTok Icon" class="social-icon-image">
-                </a>
-                <a href="https://www.linkedin.com/in/reyhan-agra-106927299" target="_blank" class="social-icon">
-                    <img src="img/linkedin.png" alt="LinkedIn Icon" class="social-icon-image">
-                </a>
-            </div>
-                <!-- Menu Item -->
-            <div class="menu-item">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#portfolio">Mini Project</a>
-            </div>
-            <footer class="copyright">
-                <p>&copy; 2024. All rights reserved.</p>
-            </footer>
-        </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Rey</span>
+                <span class="logo-dot">.</span>
+            </a>
+            
+            <div class="nav-elements">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Beranda</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#education" class="nav-link">Pendidikan</a></li>
+                    <li><a href="#projects" class="nav-link">Proyek</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
 
-        <div class="main-content">
-            <header id="home">
-                <div class="header-content">
-                    <div class="text-content">
-                        <h1>HELLO</h1>
-                        <p class="p-content">I'M REYHAN AGRA SYIHAB</p>
-                    </div>
-                    <img src="img/header.png" alt="Gambar Header" class="header-image">
-                    <a href="CV_Reyhan Agra Syihab.pdf" download class="btn">Download CV</a>
+                <div class="nav-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                        <i class="ri-sun-line"></i>
+                    </button>
+                    <button class="burger" aria-label="Toggle menu">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
                 </div>
-            </header>
+            </div>
+        </div>
+    </nav>
 
-            <section id="about">
-                <div class="about-content">
-                    <div class="about-me">
-                        <h2>About</h2>
-                        <p class="about-text">
-                            I am a high school graduate with a strong foundation in Mathematics and Natural Sciences. Continuing my academic journey, I pursued further studies at Telkom University, specializing in Informatics.
+    <main>
+        <section id="home" class="section home">
+            <div class="home-container">
+                <div class="home-content" data-aos="fade-up">
+                    <div class="home-text">
+                        <p class="greeting">👋 Hai, Saya</p>
+                        <h1 class="title">
+                            <span class="highlight">Reyhan Agra</span> Syihab
+                        </h1>
+                        <p class="subtitle">
+                            <span class="typed-text"></span>
+                            <span class="cursor">&nbsp;</span>
                         </p>
+                        <p class="description">
+                            Seorang mahasiswa yang passionate dalam pengembangan web dan teknologi,
+                            selalu mencari cara untuk menciptakan solusi kreatif melalui kode.
+                        </p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/ryhnnas" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/reyhan-agra-106927299" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="ri-linkedin-line"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@ryhnnas" target="_blank" class="social-link" aria-label="TikTok">
+                                <i class="ri-tiktok-line"></i>
+                            </a>
+                            <a href="https://github.com/ryhnnas" target="_blank" class="social-link" aria-label="GitHub">
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="cta-buttons">
+                            <a href="CV_Reyhan Agra Syihab.pdf" class="btn primary-btn" download>
+                                <i class="ri-download-line"></i>
+                                Unduh CV
+                            </a>
+                            <a href="#contact" class="btn secondary-btn">
+                                <i class="ri-send-plane-line"></i>
+                                Hubungi Saya
+                            </a>
+                        </div>
                     </div>
-                    <div class="about-image">
-                        <img src="img/Foto About.png" alt="Gambar Saya" class="about-image">
+
+                    <div class="home-image" data-aos="fade-left">
+                        <div class="image-wrapper">
+                            <img src="img/header.png" alt="Reyhan Agra Syihab" class="profile-img">
+                        </div>
+                        <div class="floating-cards">
+                            <div class="floating-card">
+                                <i class="ri-graduation-cap-line"></i>
+                                <span>Informatika</span>
+                            </div>
+                            <div class="floating-card">
+                                <i class="ri-code-line"></i>
+                                <span>Enthusiastic Web Developer</span>
+                            </div>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Tentang Saya</h2>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right">
+                        <img src="img/Foto About.png" alt="Reyhan Agra Syihab">
+                        <div class="experience-badge">
+                        </div>
                     </div>
-                    <div class="personal-info">
-                        <div class="personal-info-left">
-                            <ul>
-                                <li><strong>Nickname:</strong> Rey</li>
-                                <li><strong>Birthday:</strong> 13 July 2005</li>
-                                <li><strong>Phone:</strong> +62 852 2420 3914</li>
-                                <li><strong>City:</strong> Kuningan</li>
+
+                    <div class="about-text" data-aos="fade-left">
+                        <p class="about-description">
+                            Saya adalah mahasiswa Informatika di Telkom University dengan passion mendalam
+                            di bidang pengembangan web dan teknologi. Dengan latar belakang yang kuat di
+                            Matematika dan Sains, saya selalu berusaha menggabungkan logika dengan
+                            kreativitas dalam setiap proyek yang saya kerjakan.
+                        </p>
+
+                        <div class="skills-container">
+                            <h3>Keahlian Teknis</h3>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Frontend Development</h4>
+                                    <div class="skill-items">
+                                        <div class="skill-item">
+                                            <i class="ri-html5-line"></i>
+                                            <span>HTML</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="ri-css3-line"></i>
+                                            <span>CSS</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <i class="ri-javascript-line"></i>
+                                            <span>JavaScript</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 80%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-category">
+                                    <h4>Backend Development</h4>
+                                    <div class="skill-items">
+                                        <div class="skill-item">
+                                            <i class="ri-python-line"></i>
+                                            <span>Python</span>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section education">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Pendidikan</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <i class="ri-building-line"></i>
+                                <h3>Telkom University</h3>
+                                <span class="date">2023 - Sekarang</span>
+                            </div>
+                            <h4>Informatika</h4>
+                            <p>Fokus pada pengembangan perangkat lunak dan ilmu komputer, dengan
+                               penekanan khusus pada web development dan teknologi terkini.</p>
+                            <ul class="achievement-list">
+                                <li>Aktif dalam organisasi kampus</li>
+                                <li>Berpartisipasi dalam project tim</li>
                             </ul>
                         </div>
-                        <div class="personal-info-right">
-                            <ul>
-                                <li><strong>Age:</strong> 19</li>
-                                <li><strong>Degree:</strong> College Student</li>
-                                <li><strong>Email:</strong> agrahans13@gmail.com</li>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <i class="ri-building-4-line"></i>
+                                <h3>SMA Negeri</h3>
+                                <span class="date">2020 - 2023</span>
+                            </div>
+                            <h4>Matematika dan Sains</h4>
+                            <p>Mengembangkan dasar yang kuat dalam matematika dan sains,
+                               yang menjadi fondasi penting untuk studi informatika.</p>
+                            <ul class="achievement-list">
+                                <li>Mengikuti perlombaan matematika dan sains</li>
+                                <li>Partisipasi aktif dalam kegiatan ekstrakurikuler</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="education">
-                <h2>Education</h2>
-                <div class="education-items">
-                    <div class="education-item">
-                        <h3>Collage School</h3>
-                        <p>Informatics</p>
-                        <p>2023 - Present</p>
-                        <p>I am currently pursuing my Bachelor's degree in Informatics at Telkom University, focusing on gaining expertise in software development and computer science.</p>
+        <section id="projects" class="section projects">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Proyek Saya</h2>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="project-item" data-category="web" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="img/Login.png" alt="Login Page Project">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Login Page</h3>
+                                    <p>Halaman login responsif dengan animasi modern</p>
+                                    <div class="project-tech">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://reyhanas.github.io/login/" target="_blank" class="btn project-btn">
+                                            <i class="ri-eye-line"></i>
+                                            Demo
+                                        </a>
+                                        <a href="#" target="_blank" class="btn project-btn">
+                                            <i class="ri-github-line"></i>
+                                            Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="education-item">
-                        <h3>High School</h3>
-                        <p>Mathematics and Natural Sciences</p>
-                        <p>2020 - 2023</p>
-                        <p>During my high school years, I developed a strong foundation in Mathematics and Natural Sciences, which laid the groundwork for my academic journey.</p>
+
+                    <div class="project-gallery">
+                        <div class="project-item" data-category="web" data-aos="fade-up">
+                            <div class="project-image">
+                                <img src="img/to-do-list.png" alt="Login Page Project">
+                                <div class="project-overlay">
+                                    <div class="project-info">
+                                        <h3>To Do List</h3>
+                                        <p>Halaman login responsif dengan animasi modern</p>
+                                        <div class="project-tech">
+                                            <span>HTML</span>
+                                            <span>CSS</span>
+                                            <span>JavaScript</span>
+                                        </div>
+                                        <div class="project-links">
+                                            <a href="https://reyhanas.github.io/ToDoList/" target="_blank" class="btn project-btn">
+                                                <i class="ri-eye-line"></i>
+                                                Demo
+                                            </a>
+                                            <a href="#" target="_blank" class="btn project-btn">
+                                                <i class="ri-github-line"></i>
+                                                Code
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-gallery">
+                            <div class="project-item" data-category="web" data-aos="fade-up">
+                                <div class="project-image">
+                                    <img src="img/personal-web.png" alt="Login Page Project">
+                                    <div class="project-overlay">
+                                        <div class="project-info">
+                                            <h3>Simple Personal Web</h3>
+                                            <p>Halaman login responsif dengan animasi modern</p>
+                                            <div class="project-tech">
+                                                <span>HTML</span>
+                                                <span>CSS</span>
+                                                <span>JavaScript</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <a href="https://reyhanas.github.io/mini-project/" target="_blank" class="btn project-btn">
+                                                    <i class="ri-eye-line"></i>
+                                                    Demo
+                                                </a>
+                                                <a href="#" target="_blank" class="btn project-btn">
+                                                    <i class="ri-github-line"></i>
+                                                    Code
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    <!-- Add more project items with similar structure -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Hubungi Saya</h2>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info" data-aos="fade-right">
+                        <div class="contact-card">
+                            <i class="ri-mail-line"></i>
+                            <h3>Email</h3>
+                            <p>agrahans13@gmail.com</p>
+                            <a href="mailto:agrahans13@gmail.com" class="btn contact-btn">
+                                Kirim Email
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="ri-whatsapp-line"></i>
+                            <h3>WhatsApp</h3>
+                            <p>+62 852 2420 3914</p>
+                            <a href="https://wa.me/6285224203914" class="btn contact-btn">
+                                Kirim Pesan
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class="ri-map-pin-line"></i>
+                            <h3>Lokasi</h3>
+                            <p>Bandung, Indonesia</p>
+                            <a href="#" class="btn contact-btn">
+                                Lihat Peta
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" data-aos="fade-left">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">
+                            <i class="ri-send-plane-line"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Rey<span class="footer-dot">.</span></h3>
+                    <p class="footer-description">
+                        Membuat solusi digital yang inovatif dan estetik untuk kebutuhan modern.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/ryhnnas" target="_blank" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reyhan-agra-106927299" target="_blank" aria-label="LinkedIn">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ryhnnas" target="_blank" aria-label="TikTok">
+                            <i class="ri-tiktok-line"></i>
+                        </a>
+                        <a href="https://github.com/ryhnnas" target="_blank" aria-label="GitHub">
+                            <i class="ri-github-line"></i>
+                        </a>
                     </div>
                 </div>
-            </section>
 
-            <section id="portfolio">
-                <h2>Mini Project</h2>
-                <div class="portfolio-items">
-                    <div class="portfolio-item">
-                        <img src="img/Login.png" alt="Project 1">
-                        <div class="portfolio-text">
-                            <h3>Login Page</h3>
-                            <p>Creating a responsive and user-friendly login page, suitable for all devices.
-                             This login page is designed to display optimally on various devices with a simple and intuitive design.
-                             <a href="https://reyhanas.github.io/login/" target="_blank">view</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/to-do-list.png" alt="Project 2">
-                        <div class="portfolio-text">
-                            <h3>Simple To-Do-List</h3>
-                            <p>Mini Project creates a simple to-do list website at the end of the Frontend-HTML MySkill Course Learning.
-                                <a href="https://reyhanas.github.io/ToDoList/" target="_blank">view</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="img/personal-web.png" alt="Project 2">
-                        <div class="portfolio-text">
-                            <h3>Simple Personal Web</h3>
-                            <p>Mini Project to create a simple personal website at the end of the Frontend-CSS MySkill Course learning.
-                                <a href="https://reyhanas.github.io/mini-project/" target="_blank">view</a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Add more projects as needed -->
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Tautan Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#education">Pendidikan</a></li>
+                        <li><a href="#projects">Proyek</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
                 </div>
-            </section>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Kontak</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="ri-mail-line"></i>
+                            <a href="mailto:agrahans13@gmail.com">agrahans13@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="ri-phone-line"></i>
+                            <a href="tel:+6285224203914">+62 852 2420 3914</a>
+                        </li>
+                        <li>
+                            <i class="ri-map-pin-line"></i>
+                            <span>Bandung, Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Reyhan Agra Syihab. All Rights Reserved.</p>
+                <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+                    <i class="ri-arrow-up-line"></i>
+                </button>
+            </div>
         </div>
+    </footer>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>
